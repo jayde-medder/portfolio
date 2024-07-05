@@ -5,7 +5,7 @@ import { ThemeProvider } from './components/general/ThemeProvider'
 function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-      <main>
+      <main className="w-full">
         <BorderNav>
           <Outlet />
         </BorderNav>

@@ -17,7 +17,11 @@ export function Sidebar() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size="icon" variant="ghost" className="fixed top-2 right-2">
+        <Button
+          size="icon"
+          variant="secondary"
+          className="fixed top-[5px] right-[6px]"
+        >
           <Menu size={20} />
         </Button>
       </SheetTrigger>
