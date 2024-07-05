@@ -52,6 +52,10 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
+      fontFamily: {
+        azeret: ['"Azeret Mono"'],
+        cormorant: ['"Cormorant Garamond"'],
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
