@@ -1,8 +1,8 @@
 import { Recycle, Images, Info, Bell, Menu } from 'lucide-react'
 import { SidebarItems } from '@/models/sidebarItems.ts'
-import { Button } from '../components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '../components/ui/sheet'
-import { SidebarButton } from './SidebarButton.tsx'
+import { Button } from '../../components/ui/button'
+import { Sheet, SheetContent, SheetTrigger } from '../../components/ui/sheet'
+import { SidebarButton } from './SidebarButton'
 
 const sidebarItems: SidebarItems = {
   links: [
@@ -19,7 +19,7 @@ export function Sidebar() {
       <SheetTrigger asChild>
         <Button
           size="icon"
-          variant="secondary"
+          variant="outline"
           className="fixed top-[5px] right-[6px]"
         >
           <Menu size={20} />

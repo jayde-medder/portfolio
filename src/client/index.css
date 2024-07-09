@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    --background: 216,28%,93%;
+    --background: 216 28% 93%;
     --foreground: 20 3% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 20 3% 18%;
+    --card-foreground: 216 100% 18%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 20 3% 18%;
 
-    --primary: 216 47.4% 11.2%;
-    --primary-foreground: 214,100%,50%;
+    --primary: 216 28% 93%;
+    --primary-foreground: 214 100% 50%;
 
-    --secondary: 216 40% 96.1%;
-    --secondary-foreground: 236 100% 61%;
+    --secondary: 216 3% 18%;
+    --secondary-foreground:216 28% 93%;
 
-    --muted: 216 40% 96.1%;
-    --muted-foreground: 20 16.3% 46.9%;
+    --muted: 216 100% 30%;
+    --muted-foreground: 216 20% 50%;
 
     --accent: 216 40% 96.1%;
-    --accent-foreground: 20 47.4% 11.2%;
+    --accent-foreground: 216 100% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 20 40% 98%;
 
-    --border: 216 3% 18%;
+    --border: 216 3% 70%;
     --input: 214.3 31.8% 91.4%;
     --ring: 20 3% 18%;
 
-    --radius: 1.5rem;
+    --radius: 0.3rem;
   }
 
   .dark {
@@ -71,14 +71,33 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
-    @apply font-cormorant
+    @apply font-azeret
+    text-sm
   }
   h1{
+    @apply font-cormorant
+    text-foreground
+    font-medium 
+    text-3xl
+    mb-4
+  }
+  h2{
+    @apply font-cormorant
+    text-primary-foreground
+    font-medium
+    text-2xl
+    my-8
+  }
+  h3{
     @apply font-azeret
-    text-secondary-foreground
+    text-primary-foreground
+    font-light
+    text-lg
+    my-8
   }
 }
 

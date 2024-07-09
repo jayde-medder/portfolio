@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import Sidebar from './Sidebar'
+import { Link } from 'react-router-dom'
 
 interface BorderNavProps {
   children: ReactNode
@@ -9,7 +10,10 @@ const BorderNav: React.FC<BorderNavProps> = ({ children }) => {
   return (
     <>
       <div id="topNav" className="w-full">
-        <div id="topNavLine1" className="flex h-12 border-b border-black">
+        <div
+          id="topNavLine1"
+          className="w-full flex h-12 border-b border-black"
+        >
           <div className="flex-none sm:w-12 w-8 border-r border-black" />
           <div className="flex-none w-3 border-r border-black bg-black" />
           <div className="flex-1"></div>
@@ -32,18 +36,20 @@ const BorderNav: React.FC<BorderNavProps> = ({ children }) => {
         </div>
       </div>
       <div id="horizontalDivs" className="flex">
-        <div className="fixed sm:w-[460px] sm:-ml-[185px] sm:mt-[200px] w-[350px] -ml-[140px] mt-[150px]">
-          <img
-            className="-rotate-90"
-            src="/portfolio.png"
-            alt="Jayde Medder Heading"
-          />
+        <div className="fixed sm:w-[460px] sm:-ml-[178px] sm:mt-[200px] w-[350px] -ml-[140px] mt-[150px]">
+          <Link to="/">
+            <img
+              className="-rotate-90"
+              src="/portfolio.png"
+              alt="Jayde Medder Heading"
+            />
+          </Link>
         </div>
-        <div className="flex-none h-screen sm:w-12 w-8 border-r border-black" />
-        <div className="flex-none h-screen w-3 border-r border-black" />
-        <div className="flex-1 p-10">{children}</div>
-        <div className="flex-none h-screen w-3 right-0 border-l border-black" />
-        <div className="flex-none h-screen sm:w-12 w-8 right-0 border-l border-black" />
+        <div className="flex-none min-h-screen sm:w-12 w-8 border-r border-black" />
+        <div className="flex-none min-h-screen w-3 border-r border-black" />
+        <section className="flex-1 p-12">{children}</section>
+        <div className="flex-none min-h-screen w-3 right-0 border-l border-black" />
+        <div className="flex-none min-h-screen sm:w-12 w-8 right-0 border-l border-black" />
       </div>
     </>
   )
