@@ -39,8 +39,8 @@ const IconWrapper: React.FC<IconWrapperProps> = ({ Icon, className }) => (
 
 function AboutReGear() {
   return (
-    <>
-      <div className="w-full px-10 flex justify-center ">
+    <div className="w-full sm:px-10">
+      <div className="w-full flex justify-center ">
         <img
           className="max-h-32 max-w-32 rounded-full"
           src="/regear-logo.png"
@@ -76,6 +76,7 @@ function AboutReGear() {
         />
       </div>
       <h3>My Role</h3>
+      <hr></hr>
       <p className="mb-8">
         While researching inventory solutions, I realised we had the opportunity
         to build something unique to meet our needs. Initially, I was the sole
@@ -91,6 +92,7 @@ function AboutReGear() {
         consulting.
       </p>
       <h3>The Team</h3>
+      <hr></hr>
       <p className="mb-8">
         Lee Nicolson{' '}
         <a className="underline" href="https://www.lwave.nz/about.html">
@@ -129,7 +131,7 @@ function AboutReGear() {
           </a>
         </div>
       </Card>
-    </>
+    </div>
   )
 }
 

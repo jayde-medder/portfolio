@@ -8,7 +8,7 @@ interface BorderNavProps {
 
 const BorderNav: React.FC<BorderNavProps> = ({ children }) => {
   return (
-    <>
+    <div className="w-full">
       <div id="topNav" className="w-full">
         <div
           id="topNavLine1"
@@ -40,18 +40,18 @@ const BorderNav: React.FC<BorderNavProps> = ({ children }) => {
           <Link to="/">
             <img
               className="-rotate-90"
-              src="/portfolio.png"
+              src="/name.png"
               alt="Jayde Medder Heading"
             />
           </Link>
         </div>
         <div className="flex-none min-h-screen sm:w-12 w-8 border-r border-black" />
         <div className="flex-none min-h-screen w-3 border-r border-black" />
-        <section className="flex-1 p-12">{children}</section>
+        <section className="flex-1 p-10">{children}</section>
         <div className="flex-none min-h-screen w-3 right-0 border-l border-black" />
         <div className="flex-none min-h-screen sm:w-12 w-8 right-0 border-l border-black" />
       </div>
-    </>
+    </div>
   )
 }
 

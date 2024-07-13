@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function ReGearIntro() {
   return (
-    <section className="mr-0 sm:ml-auto w-fit pt-16 lg:pl-8 lg:pt-52 lg:w-[49%]">
+    <section className="max-lg:pt-16 lg:px-16 row-start-2 row-span-2">
       <div className="w-full flex justify-center ">
         <Link to="/about-regear">
           <img

@@ -97,7 +97,11 @@
     text-primary-foreground
     font-light
     text-lg
-    my-8
+    mt-8
+    mb-4
+  }
+  hr{
+    @apply my-4
   }
 }
 
