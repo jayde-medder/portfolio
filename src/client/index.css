@@ -1,4 +1,10 @@
 /* ShadCn edits this file during initialisation. go to https://ui.shadcn.com/themes to customise a theme or just do it here manually :) */
+@font-face {
+  font-family: 'Draculie';
+  src: url(/public/Draculie.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
@@ -99,6 +105,16 @@
     text-lg
     mt-8
     mb-4
+  }
+  h4{
+    font-family: 'Draculie', serif;
+    @apply text-primary-foreground
+  }
+  h5{
+    @apply font-azeret
+    text-primary
+    text-lg
+    text-center
   }
   hr{
     @apply my-4

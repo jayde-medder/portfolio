@@ -36,18 +36,14 @@ const BorderNav: React.FC<BorderNavProps> = ({ children }) => {
         </div>
       </div>
       <div id="horizontalDivs" className="flex">
-        <div className="fixed sm:w-[460px] sm:-ml-[178px] sm:mt-[200px] w-[350px] -ml-[140px] mt-[150px]">
-          <Link to="/">
-            <img
-              className="-rotate-90"
-              src="/name.png"
-              alt="Jayde Medder Heading"
-            />
+        <div className="fixed sm:-ml-[165px] sm:mt-48 -ml-[100px] mt-32 w-fit">
+          <Link to="/" className="fixed -rotate-90 w-fit block">
+            <h4 className="sm:text-8xl text-6xl">Jayde Medder</h4>
           </Link>
         </div>
         <div className="flex-none min-h-screen sm:w-12 w-8 border-r border-black" />
         <div className="flex-none min-h-screen w-3 border-r border-black" />
-        <section className="flex-1 p-10">{children}</section>
+        <section className="flex-1 sm:p-10 p-6">{children}</section>
         <div className="flex-none min-h-screen w-3 right-0 border-l border-black" />
         <div className="flex-none min-h-screen sm:w-12 w-8 right-0 border-l border-black" />
       </div>
