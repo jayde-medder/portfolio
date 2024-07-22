@@ -5,6 +5,8 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetFooter,
+  SheetHeader,
   SheetTrigger,
 } from '../../components/ui/sheet'
 import { SidebarButton } from './SidebarButton'
@@ -31,26 +33,34 @@ export function Sidebar() {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <div className="h-full px-1 py-4">
-          <div className="mt-5">
-            <div className="flex flex-col gap-8 w-full">
-              {sidebarItems.links.map((link) => (
-                <SheetClose asChild>
-                  <Link to={link.href}>
-                    <SidebarButton
-                      variant="custom"
-                      size="sm"
-                      icon={link.icon}
-                      className="w-full"
-                    >
-                      {link.label}
-                    </SidebarButton>
-                  </Link>
-                </SheetClose>
-              ))}
-              {sidebarItems.extras}
-            </div>
+        <SheetHeader className="text-primary-foreground">
+          Jayde Medder: Portfolio<hr className="border-primary-forground"></hr>
+        </SheetHeader>
+        <div className="flex flex-col h-full justify-between pt-4">
+          <div className="flex flex-col gap-8 w-full">
+            {sidebarItems.links.map((link) => (
+              <SheetClose asChild>
+                <Link to={link.href}>
+                  <SidebarButton
+                    variant="custom"
+                    size="default"
+                    icon={link.icon}
+                    className="w-full"
+                  >
+                    {link.label}
+                  </SidebarButton>
+                </Link>
+              </SheetClose>
+            ))}
           </div>
+          <SheetFooter>
+            <div className="max-w-20 flex-1 p-3 flex items-center justify-center hover:scale-[105%]">
+              <img src="/li-mark-blue.png" className="object-contain" />
+            </div>
+            <div className="max-w-20 flex-1 p-3 flex items-center justify-center hover:scale-[105%]">
+              <img src="/github-mark.png" className="object-contain" />
+            </div>
+          </SheetFooter>
         </div>
       </SheetContent>
     </Sheet>

@@ -1,7 +1,7 @@
 import { Route, createRoutesFromElements } from 'react-router-dom'
 import App from './App'
 import Home from './pages/Home'
-import AboutReGear from './pages/ReGear'
+import AboutReGear from './pages/ReGear/ReGear'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 

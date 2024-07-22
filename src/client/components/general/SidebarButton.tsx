@@ -15,8 +15,8 @@ export function SidebarButton({
 }: SidebarButtonProps) {
   return (
     <Button
-      variant="default"
-      className={cn('gap-6 justify-start', className)}
+      variant="custom"
+      className={cn('gap-6 justify-start text-wrap', className)}
       {...props}
     >
       {Icon && <Icon size={20} />}
