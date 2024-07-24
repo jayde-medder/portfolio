@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
-import { Card, CardFooter, CardHeader } from '../ui/card'
+import { Card, CardHeader, CardFooter } from '../ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -40,21 +40,33 @@ function ThumbsCarousel({ demos }: ThumbsCarouselItems) {
   }, [api])
 
   return (
-    <div className="max-w-full -mr-32">
-      <Carousel setApi={setApi}>
-        <CarouselContent>
+    <div className="w-full max-w-[650px]">
+      <h2>Where we're at:</h2>
+      <hr></hr>
+      <Carousel setApi={setApi} className="">
+        <CarouselContent className="">
           {demos.map((demo, index) => (
             <CarouselItem key={index} className="">
               <Card className="border-none p-2">
-                <CardHeader className="h-[350px] p-3">
-                  <img
-                    src={demo.image}
-                    alt={demo.header}
-                    className="h-full object-scale-down"
-                  />
+                <CardHeader className="h-[40vh] lg:h-[50vh] p-3">
+                  {demo.image ? (
+                    <img
+                      src={demo.image}
+                      alt={demo.header}
+                      className="h-full object-scale-down"
+                    />
+                  ) : (
+                    <video
+                      src={demo.video}
+                      autoPlay
+                      loop
+                      muted
+                      className="h-full object-scale-down"
+                    />
+                  )}
                 </CardHeader>
-                <CardFooter className="bg-secondary flex flex-col items-center h-[150px] rounded-md p-3">
-                  <h3 className="text-xl font-bold tracking-wide m-2">
+                <CardFooter className="w-full bg-secondary flex flex-col items-center justify-center h-[150px] rounded-md p-3">
+                  <h3 className="md:text-xl text-base font-bold tracking-wide md:m-0 -m-1">
                     {demo.header}
                   </h3>
                   <p className="text-center m-2 text-background">
@@ -75,7 +87,8 @@ function ThumbsCarousel({ demos }: ThumbsCarouselItems) {
                   onClick={() => onThumbClick(index)}
                   selected={index === selectedIndex}
                   index={index}
-                  image={demo.image}
+                  image={demo.image || demo.video}
+                  isVideo={!!demo.video}
                 />
               ))}
               <CarouselNext />

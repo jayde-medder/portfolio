@@ -3,8 +3,9 @@ import IconWrapper from './IconWrapper'
 import { platformNeeds } from './data'
 
 const PlatformNeeds: React.FC = () => (
-  <>
-    <h3>Our platform needed to...</h3>
+  <div className="max-w-[650px]">
+    <h2>Our platform needed to...</h2>
+    <hr></hr>
     <ul>
       {platformNeeds.map(({ icon: Icon, text }, index) => (
         <li key={index} className="flex font-light p-2">
@@ -13,7 +14,7 @@ const PlatformNeeds: React.FC = () => (
         </li>
       ))}
     </ul>
-  </>
+  </div>
 )
 
 export default PlatformNeeds

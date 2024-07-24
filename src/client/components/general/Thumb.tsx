@@ -4,7 +4,8 @@ interface ThumbProps {
   index: number
   selected: boolean
   onClick: () => void
-  image: string
+  image?: string
+  isVideo?: boolean
 }
 
 export const Thumb: React.FC<ThumbProps> = ({
@@ -12,6 +13,7 @@ export const Thumb: React.FC<ThumbProps> = ({
   selected,
   onClick,
   image,
+  isVideo = false,
 }) => {
   return (
     <div
@@ -21,12 +23,17 @@ export const Thumb: React.FC<ThumbProps> = ({
           : 'border-2 border-transparent'
       }`}
       onClick={onClick}
+      aria-label={`Thumbnail ${index}`}
     >
-      <img
-        src={image}
-        alt={`Thumbnail ${index}`}
-        className="thumbnail-image w-full h-auto object-cover rounded-lg"
-      />
+      {isVideo ? (
+        <video src={image} className="-full h-auto object-cover rounded-lg" />
+      ) : (
+        <img
+          src={image}
+          alt={`Thumbnail ${index}`}
+          className="-full h-auto object-cover rounded-lg"
+        />
+      )}
     </div>
   )
 }
