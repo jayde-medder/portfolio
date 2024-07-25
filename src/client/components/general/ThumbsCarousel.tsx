@@ -41,7 +41,6 @@ function ThumbsCarousel({ demos }: ThumbsCarouselItems) {
 
   return (
     <div className="w-full max-w-[650px]">
-      <h2>Where we're at:</h2>
       <Carousel setApi={setApi} className="">
         <CarouselContent className="">
           {demos.map((demo, index) => (

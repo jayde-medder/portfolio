@@ -37,6 +37,7 @@ function AboutReGear() {
         </section>
       </div>
       <section className="flex flex-col items-center w-full max-w-full py-8">
+        <h2>Where we're at:</h2>
         <ThumbsCarousel demos={reGearDemoData} />
       </section>
       <div className="lg:flex gap-8">
