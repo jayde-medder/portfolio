@@ -3,10 +3,11 @@ import { Card, CardDescription, CardHeader } from '../../components/ui/card'
 import ThumbsCarousel from '../../components/general/ThumbsCarousel'
 import PlatformNeeds from './PlatformNeeds'
 import { reGearDemoData } from './data'
+import { Separator } from '../../components/ui/separator'
 
 function AboutReGear() {
   return (
-    <div className="w-full sm:px-10">
+    <div className="w-full h-full sm:px-10">
       <div className="w-full flex justify-center lg:pb-10">
         <img
           className="max-h-32 max-w-32 rounded-full"
@@ -14,8 +15,8 @@ function AboutReGear() {
           alt="re:Gear logo"
         />
       </div>
-      <div className="lg:flex justify-center items-center gap-14">
-        <section className="flex-1">
+      <div className="lg:grid grid-cols-5 justify-center items-center space-x-4 min-h-max">
+        <section className="items-center col-span-2">
           <p className="my-8 text-center lg:text-base">
             In 2023 <b>Re:Gear</b> began with a small group of friends fixing up
             hardware junk at a community space in North East Valley. News caught
@@ -28,7 +29,10 @@ function AboutReGear() {
             realised we had a unique problem on our hands.
           </p>
         </section>
-        <section className="flex flex-col items-center flex-1">
+        <section className="flex justify-center h-3/4">
+          <Separator orientation="vertical" className="hidden lg:block" />
+        </section>
+        <section className="items-center col-span-2">
           <PlatformNeeds />
         </section>
       </div>
@@ -47,7 +51,7 @@ function AboutReGear() {
             collaborator joined for a while before moving away for work, I have
             continued to develop the app largely on my own.
           </p>
-          <p className="mb-8">
+          <p className="font-semibold mb-8">
             I'm actively looking for full-stack developers who are keen to
             donate their time to an important and fun local initiative while
             also building their skills. Please get in touch if you're interested
