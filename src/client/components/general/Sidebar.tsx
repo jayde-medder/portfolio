@@ -1,4 +1,5 @@
-import { Recycle, Images, Bell, Menu } from 'lucide-react'
+import { Recycle, Images, Bell } from 'lucide-react'
+import { HiOutlineMenu } from 'react-icons/hi'
 import { SidebarItems } from '@/models/sidebarItems.ts'
 import { Button } from '../../components/ui/button'
 import {
@@ -29,7 +30,7 @@ export function Sidebar() {
           variant="outline"
           className="fixed top-[5px] right-[6px]"
         >
-          <Menu size={20} />
+          <HiOutlineMenu size={20} />
         </Button>
       </SheetTrigger>
       <SheetContent>

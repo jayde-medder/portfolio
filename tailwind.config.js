@@ -53,8 +53,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        azeret: ['"Azeret Mono"'],
-        cormorant: ['"Cormorant Garamond"'],
+        inter: ['"Inter"'],
+        cardo: ['"Cardo"'],
       },
       borderRadius: {
         lg: 'var(--radius)',

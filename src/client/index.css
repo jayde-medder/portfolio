@@ -16,29 +16,29 @@
     --foreground: 216 3% 30%;
 
     --card: 0 0% 100%;
-    --card-foreground: 216 100% 18%;
+    --card-foreground: 216 85% 18%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 20 3% 18%;
 
     --primary: 216 28% 93%;
-    --primary-foreground: 214 100% 50%;
+    --primary-foreground: 216 85% 50%;
 
     --secondary: 216 3% 18%;
     --secondary-foreground:216 28% 93%;
 
-    --muted: 216 100% 30%;
+    --muted: 216 85% 30%;
     --muted-foreground: 216 20% 50%;
 
     --accent: 216 40% 96.1%;
-    --accent-foreground: 216 100% 18%;
+    --accent-foreground: 216 85% 18%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 20 40% 98%;
 
     --border: 216 3% 20%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 20 3% 18%;
+    --ring: 0 0% 100%;
 
     --radius: 0rem;
   }
@@ -81,27 +81,27 @@
   }
   body {
     @apply bg-background text-foreground;
-    @apply font-azeret
-    text-xs
-    sm:text-sm
+    @apply font-inter
+    text-sm
+    sm:text-base
     tracking-tight
   }
   h1{
-    @apply font-cormorant
+    @apply font-cardo
     text-foreground
     font-medium 
     text-3xl
     mb-4
   }
   h2{
-    @apply font-cormorant
+    @apply font-inter
     text-primary-foreground
     font-medium
     text-2xl
     my-4
   }
   h3{
-    @apply font-azeret
+    @apply font-cardo
     text-primary-foreground
     text-lg/6
     font-bold
@@ -114,7 +114,7 @@
     @apply text-primary-foreground
   }
   h5{
-    @apply font-azeret
+    @apply font-inter
     text-primary
     text-lg
     text-center
