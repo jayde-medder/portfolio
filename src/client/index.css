@@ -87,11 +87,12 @@
     tracking-tight
   }
   h1{
-    @apply font-cardo
+    @apply font-merriweather
     text-foreground
-    font-medium 
+    font-light
     text-3xl
     mb-4
+    tracking-tight
   }
   h2{
     @apply font-inter
@@ -101,13 +102,12 @@
     my-4
   }
   h3{
-    @apply font-cardo
+    @apply font-jetbrains
     text-primary-foreground
-    text-lg/6
-    font-bold
+    text-lg
+    font-thin
     mt-8
     mb-4
-    tracking-wider
   }
   h4{
     font-family: 'Draculie', serif;

@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router-dom'
-import BorderNav from './components/general/BorderNav'
-import { ThemeProvider } from './components/general/ThemeProvider'
-import ScrollToTop from './components/general/ScrollToTop'
+import { Outlet } from 'react-router-dom';
+import BorderNav from './components/general/BorderNav/BorderNav';
+import { ThemeProvider } from './components/general/ThemeProvider';
+import ScrollToTop from './components/general/ScrollToTop';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </BorderNav>
       </main>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

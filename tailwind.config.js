@@ -54,7 +54,8 @@ module.exports = {
       },
       fontFamily: {
         inter: ['"Inter"'],
-        cardo: ['"Cardo"'],
+        merriweather: ['"Merriweather"'],
+        jetbrains: ['"JetBrains Mono"'],
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -77,5 +78,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
-}
+  plugins: [require('tailwindcss-animate'), require('tailwind-scrollbar')],
+};
