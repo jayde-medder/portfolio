@@ -8,7 +8,7 @@ interface BorderNavProps {
 
 const BorderNav: React.FC<BorderNavProps> = ({ children }) => {
   return (
-    <div className="fixed inset-0 flex flex-col">
+    <div className="sm:fixed inset-0 flex flex-col overflow-auto">
       <TopNav />
       <HorizontalSection>{children}</HorizontalSection>
     </div>

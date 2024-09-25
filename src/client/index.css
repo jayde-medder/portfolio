@@ -1,11 +1,3 @@
-/* ShadCn edits this file during initialisation. go to https://ui.shadcn.com/themes to customise a theme or just do it here manually :) */
-@font-face {
-  font-family: 'Draculie';
-  src: url(/public/Draculie.woff) format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -44,7 +36,7 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 30% 15%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -54,7 +46,7 @@
     --popover-foreground: 210 40% 98%;
 
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -110,7 +102,6 @@
     mb-4
   }
   h4{
-    font-family: 'Draculie', serif;
     @apply text-primary-foreground
   }
   h5{
