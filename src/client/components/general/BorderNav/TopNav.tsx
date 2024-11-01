@@ -1,5 +1,6 @@
 import Sidebar from '../Sidebar';
 import { ModeToggleSwitch } from '../ModeToggleSwitch';
+import { Link } from 'react-router-dom';
 
 const TopNav = () => {
   return (
@@ -7,8 +8,20 @@ const TopNav = () => {
       <div className="flex h-12 border-b border-foreground w-full">
         <div className="flex-none sm:w-12 w-8 border-r-2 border-foreground" />
         <div className="flex-none w-3 border-r border-foreground bg-foreground" />
-        <div className="flex-1" />
-        <div className="flex-1 flex justify-end">
+        <div className="flex-1 flex justify-between">
+          <div className="flex px-4 items-center">
+            <Link to="/">
+              <h6>
+                <span className="initial">
+                  j<span className="first-name">ayde</span>
+                </span>
+                <span className="initial-2">
+                  M<span className="last-name">edder</span>
+                </span>
+              </h6>
+            </Link>
+          </div>
+
           <ModeToggleSwitch />
         </div>
         <div className="flex-none w-3 right-0 border-l border-foreground bg-foreground" />
