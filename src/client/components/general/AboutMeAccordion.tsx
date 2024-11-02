@@ -3,7 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '../ui/accordion'
+} from '../ui/accordion';
+import { Technologies } from './Technologies';
 
 export function AboutMeAccordion() {
   return (
@@ -11,9 +12,7 @@ export function AboutMeAccordion() {
       <AccordionItem value="item-1">
         <AccordionTrigger>Languages & Frameworks</AccordionTrigger>
         <AccordionContent>
-          React. TypeScript. Tailwind. ShadCn. HTML. css. Git. Node.js. C. Java.
-          C#. SQlite. ReactQuery. Postgres. Knex. Express. JavaScript. Auth0.
-          Vite. Rest API's.
+          <Technologies />
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
@@ -53,5 +52,5 @@ export function AboutMeAccordion() {
         </AccordionContent>
       </AccordionItem>
     </Accordion>
-  )
+  );
 }
