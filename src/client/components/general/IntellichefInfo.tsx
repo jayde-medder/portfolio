@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { Card, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { GoArrowUpRight, GoArrowRight } from 'react-icons/go';
 
-function ReGearIntro() {
+function IntellichefIntro() {
   return (
     <Card className="p-4 max-lg:mt-12 mb-4">
       <CardHeader className="p-4 pb-8 w-full flex flex-row justify-between">
         <Link to="/about-regear">
           <img
-            className="max-h-24 max-w-24 rounded-full transition-transform transform hover:scale-[101%] hover:shadow-sm"
-            src="/regear-logo.png"
+            className="max-h-24 max-w-24 transition-transform transform hover:scale-[101%] hover:shadow-sm"
+            src="/chef hat guy3.png"
             alt="re:Gear logo"
           />
         </Link>
@@ -18,15 +18,12 @@ function ReGearIntro() {
           <GoArrowUpRight />
         </a>
       </CardHeader>
-      <CardTitle>Re:Gear</CardTitle>
+      <CardTitle>IntelliChef</CardTitle>
       <CardDescription className="mt-4 w-full">
-        An e-waste minimisation initiative based in Ōtepoti, dedicated to
-        fostering an inclusive, sustainable, and innovative community where
-        resources are repaired and shared instead of discarded.
+        An OpenAi API powered recipe generator web app. Initially created @ DevAcademy with Suwon Jeong & Ben Velasco and rearchitected/designed by me. 
       </CardDescription>
       <CardDescription className="mt-2 w-full">
-        My role within the team has been to facilitate the development of our
-        inventory management platform.
+        
       </CardDescription>
       <div className="mt-8 flex justify-between">
         <Link to="/about-regear">
@@ -37,7 +34,7 @@ function ReGearIntro() {
         </Link>
         <a href="https://regear.org.nz/" target="blank">
           <Button variant="outline">
-            regear.org.nz&nbsp;
+            view app&nbsp;
             <GoArrowUpRight />
           </Button>
         </a>
@@ -46,4 +43,4 @@ function ReGearIntro() {
   );
 }
 
-export default ReGearIntro;
+export default IntellichefIntro;

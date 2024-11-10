@@ -1,6 +1,7 @@
 import Sidebar from '../Sidebar';
 import { ModeToggleSwitch } from '../ModeToggleSwitch';
 import { Link } from 'react-router-dom';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const TopNav = () => {
   return (
@@ -21,8 +22,13 @@ const TopNav = () => {
               </h6>
             </Link>
           </div>
-
-          <ModeToggleSwitch />
+          <div className="flex justify-center gap-6 items-center">
+            <div className="flex gap-3 md:hidden">
+              <FaLinkedin size={25} className="fill-primary-foreground" />
+              <FaGithub size={25} className="fill-primary-foreground" />
+            </div>
+            <ModeToggleSwitch />
+          </div>
         </div>
         <div className="flex-none w-3 right-0 border-l border-foreground bg-foreground" />
         <div className="flex-none sm:w-12 w-8 right-0 border-l-2 border-foreground" />

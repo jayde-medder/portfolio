@@ -4,11 +4,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '../ui/accordion';
+import Education from './Education';
 import { Technologies } from './Technologies';
 
 export function AboutMeAccordion() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion
+      type="multiple"
+      defaultValue={['item-1', 'item-2', 'item-3']}
+      className="w-full"
+    >
       <AccordionItem value="item-1">
         <AccordionTrigger>Languages & Frameworks</AccordionTrigger>
         <AccordionContent>
@@ -18,23 +23,7 @@ export function AboutMeAccordion() {
       <AccordionItem value="item-2">
         <AccordionTrigger>Education</AccordionTrigger>
         <AccordionContent>
-          <p>
-            <b>Bachelor of Arts </b>-{' '}
-            <i>(Computer Science Major, Music Technology Minor)</i>
-          </p>
-          <p className="mt-2">
-            University Of Otago
-            <br />
-            2018
-          </p>
-          <p className="mt-6">
-            <b>New Zealand Certificate in Applied Software Development</b>
-          </p>
-          <p className="mt-2">
-            Dev Academy Aotearoa
-            <br />
-            2023
-          </p>
+          <Education />
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">

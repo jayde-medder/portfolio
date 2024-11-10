@@ -1,13 +1,14 @@
-import { Button } from '../ui/button'
-import { Link } from 'react-router-dom'
+import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
+import { Card } from '../ui/card';
 
 function PortfolioIntro() {
   return (
-    <section className="w-full mt-16 row-start-3 row-span-2">
+    <Card className="lg:p-12 max-lg:pt-12 mb-4">
       <div className="w-full flex justify-center ">
         <Link to="/gallery">
           <img
-            className="max-h-52 max-w-52 rounded-full transition-transform transform hover:scale-[102%] hover:shadow-md"
+            className="max-h-36 max-w-36 rounded-full transition-transform transform hover:scale-[102%] hover:shadow-md"
             src="/portfolio.png"
             alt="A portfolio icon"
           />
@@ -21,8 +22,8 @@ function PortfolioIntro() {
           <Button variant="secondary">GO TO GALLERY</Button>
         </Link>
       </div>
-    </section>
-  )
+    </Card>
+  );
 }
 
-export default PortfolioIntro
+export default PortfolioIntro;
