@@ -1,13 +1,11 @@
-import { ContactForm } from '../components/general/ContactForm'
-import LinkCards from '../components/general/LinkCards'
+import { ContactForm } from '../components/general/ContactForm';
 
 function Contact() {
   return (
-    <>
-      <LinkCards />
+    <div className="flex justify-center">
       <ContactForm />
-    </>
-  )
+    </div>
+  );
 }
 
-export default Contact
+export default Contact;

@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-import emailjs from '@emailjs/browser'
-import { useState, useRef } from 'react'
-import { Button } from '../ui/button'
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import emailjs from '@emailjs/browser';
+import { useState, useRef } from 'react';
+import { Button } from '../ui/button';
 import {
   Form,
   FormControl,
@@ -13,10 +13,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
-import { Card, CardContent, CardFooter, CardHeader } from '../ui/card'
-import { Input } from '../ui/input'
-import { Textarea } from '../ui/textarea'
+} from '../ui/form';
+import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,7 +31,7 @@ const formSchema = z.object({
   message: z.string().min(2, {
     message: 'Please enter a message',
   }),
-})
+});
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -42,10 +42,10 @@ export function ContactForm() {
       subject: '',
       message: '',
     },
-  })
+  });
 
-  const [status, setStatus] = useState<string>('')
-  const formRef = useRef<HTMLFormElement>(null)
+  const [status, setStatus] = useState<string>('');
+  const formRef = useRef<HTMLFormElement>(null);
 
   function onSubmit() {
     if (formRef.current) {
@@ -58,19 +58,19 @@ export function ContactForm() {
         )
         .then(
           (response) => {
-            console.log('SUCCESS!', response.status, response.text)
-            setStatus('Message sent successfully!')
+            console.log('SUCCESS!', response.status, response.text);
+            setStatus('Message sent successfully!');
           },
           (error) => {
-            console.log('FAILED...', error)
-            setStatus('Error sending message.')
+            console.log('FAILED...', error);
+            setStatus('Error sending message.');
           }
-        )
+        );
     }
   }
 
   return (
-    <Card className="sm:p-8 bg-transparent border-none shadow-none">
+    <Card className="max-w-[650px] w-full p-8 m-8">
       <CardHeader>
         <h3 className="m-0 font-semibold">SEND ME A MESSAGE</h3>
       </CardHeader>
@@ -99,7 +99,7 @@ export function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Your Email</FormLabel>
                   <FormControl>
                     <Input className="max-w-80" {...field} />
                   </FormControl>
@@ -145,5 +145,5 @@ export function ContactForm() {
         </Form>
       </CardContent>
     </Card>
-  )
+  );
 }

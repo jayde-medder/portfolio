@@ -1,7 +1,7 @@
-import { Recycle, Images, Bell } from 'lucide-react'
-import { HiOutlineMenu } from 'react-icons/hi'
-import { SidebarItems } from '@/models/sidebarItems.ts'
-import { Button } from '../../components/ui/button'
+import { Recycle, Images, Bell } from 'lucide-react';
+import { HiOutlineMenu } from 'react-icons/hi';
+import { SidebarItems } from '@/models/sidebarItems.ts';
+import { Button } from '../../components/ui/button';
 import {
   Sheet,
   SheetClose,
@@ -9,9 +9,10 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTrigger,
-} from '../../components/ui/sheet'
-import { SidebarButton } from './SidebarButton'
-import { Link } from 'react-router-dom'
+} from '../../components/ui/sheet';
+import { SidebarButton } from './SidebarButton';
+import { Link } from 'react-router-dom';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const sidebarItems: SidebarItems = {
   links: [
@@ -19,7 +20,7 @@ const sidebarItems: SidebarItems = {
     { label: 'Gallery', href: '/gallery', icon: Images },
     { label: 'Contact me', href: '/contact', icon: Bell },
   ],
-}
+};
 
 export function Sidebar() {
   return (
@@ -34,38 +35,42 @@ export function Sidebar() {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader className="text-primary-foreground">
-          Jayde Medder: Portfolio<hr className="border-primary-forground"></hr>
+        <SheetHeader className="font-jetbrains text-foreground">
+          jaydeMedder: Portfolio
         </SheetHeader>
-        <div className="flex flex-col h-full justify-between pt-4">
+        <div className="flex flex-col h-full justify-center pt-4">
           <div className="flex flex-col gap-8 w-full">
             {sidebarItems.links.map((link) => (
-              <SheetClose asChild>
-                <Link to={link.href}>
-                  <SidebarButton
-                    variant="custom"
-                    size="default"
-                    icon={link.icon}
-                    className="w-full"
-                  >
-                    {link.label}
-                  </SidebarButton>
-                </Link>
-              </SheetClose>
+              <div className="flex flex-col">
+                <SheetClose asChild>
+                  <Link to={link.href}>
+                    <SidebarButton
+                      variant="custom"
+                      size="default"
+                      icon={link.icon}
+                      className="w-full"
+                    >
+                      {link.label}
+                    </SidebarButton>
+                  </Link>
+                </SheetClose>
+              </div>
             ))}
           </div>
-          <SheetFooter>
-            <div className="max-w-20 flex-1 p-3 flex items-center justify-center hover:scale-[105%]">
-              <img src="/li-mark-blue.png" className="object-contain" />
-            </div>
-            <div className="max-w-20 flex-1 p-3 flex items-center justify-center hover:scale-[105%]">
-              <img src="/github-mark.png" className="object-contain" />
-            </div>
-          </SheetFooter>
         </div>
+        <SheetFooter>
+          <div className="flex gap-3">
+            <a href="https://www.linkedin.com/in/jayde-medder/" target="blank">
+              <FaLinkedin size={30} className="fill-primary-foreground" />
+            </a>
+            <a href="https://github.com/jayde-medder" target="blank">
+              <FaGithub size={30} className="fill-primary-foreground" />
+            </a>
+          </div>
+        </SheetFooter>
       </SheetContent>
     </Sheet>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

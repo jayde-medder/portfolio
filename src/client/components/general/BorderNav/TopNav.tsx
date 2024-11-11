@@ -24,8 +24,15 @@ const TopNav = () => {
           </div>
           <div className="flex justify-center gap-6 items-center">
             <div className="flex gap-3 md:hidden">
-              <FaLinkedin size={25} className="fill-primary-foreground" />
-              <FaGithub size={25} className="fill-primary-foreground" />
+              <a
+                href="https://www.linkedin.com/in/jayde-medder/"
+                target="blank"
+              >
+                <FaLinkedin size={25} className="fill-primary-foreground" />
+              </a>
+              <a href="https://github.com/jayde-medder" target="blank">
+                <FaGithub size={25} className="fill-primary-foreground" />
+              </a>
             </div>
             <ModeToggleSwitch />
           </div>

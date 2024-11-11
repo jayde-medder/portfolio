@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react'
-import { Card, CardHeader, CardFooter } from '../ui/card'
+import { useState, useEffect, useCallback } from 'react';
+import { Card, CardHeader, CardFooter } from '../ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -7,37 +7,37 @@ import {
   CarouselApi,
   CarouselPrevious,
   CarouselNext,
-} from '../ui/carousel'
-import { Thumb } from './Thumb'
-import { ThumbsCarouselItems } from '@/models/thumbCarouselItems'
+} from '../ui/carousel';
+import { Thumb } from './Thumb';
+import { ThumbsCarouselItems } from '@/models/thumbCarouselItems';
 
 function ThumbsCarousel({ demos }: ThumbsCarouselItems) {
-  const [api, setApi] = useState<CarouselApi>()
-  const [selectedIndex, setSelectedIndex] = useState(0)
+  const [api, setApi] = useState<CarouselApi>();
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const onThumbClick = useCallback(
     (index: number) => {
-      if (!api) return
-      api.scrollTo(index)
+      if (!api) return;
+      api.scrollTo(index);
     },
     [api]
-  )
+  );
 
   useEffect(() => {
-    if (!api) return
+    if (!api) return;
 
     const updateSelectedIndex = () => {
-      setSelectedIndex(api.selectedScrollSnap())
-    }
+      setSelectedIndex(api.selectedScrollSnap());
+    };
 
-    api.on('select', updateSelectedIndex)
+    api.on('select', updateSelectedIndex);
 
-    updateSelectedIndex() // Set initial selected index
+    updateSelectedIndex(); // Set initial selected index
 
     return () => {
-      api.off('select', updateSelectedIndex)
-    }
-  }, [api])
+      api.off('select', updateSelectedIndex);
+    };
+  }, [api]);
 
   return (
     <div className="w-full max-w-[650px]">
@@ -95,7 +95,7 @@ function ThumbsCarousel({ demos }: ThumbsCarouselItems) {
         </div>
       </Carousel>
     </div>
-  )
+  );
 }
 
-export default ThumbsCarousel
+export default ThumbsCarousel;

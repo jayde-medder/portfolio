@@ -1,19 +1,20 @@
-import React from 'react'
-import IconWrapper from './IconWrapper'
-import { platformNeeds } from './data'
+import React from 'react';
+import IconWrapper from './IconWrapper';
+import { platformNeeds } from './data';
+import { Card } from '@/client/components/ui/card';
 
 const PlatformNeeds: React.FC = () => (
-  <div className="max-w-[650px]">
+  <div className="sm:px-10">
     <h2>Our platform needed to...</h2>
     <ul>
       {platformNeeds.map(({ icon: Icon, text }, index) => (
-        <li key={index} className="flex font-light p-2">
-          <IconWrapper Icon={Icon} className="mr-5" />
+        <Card key={index} className="flex items-center my-2 pl-2 py-2 pr-6">
+          <IconWrapper Icon={Icon} className="mr-4" />
           {text}
-        </li>
+        </Card>
       ))}
     </ul>
   </div>
-)
+);
 
-export default PlatformNeeds
+export default PlatformNeeds;

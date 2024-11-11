@@ -4,7 +4,7 @@ import ReGearIntro from '../components/general/ReGearIntro';
 
 function Home() {
   return (
-    <div className="w-full h-full lg:flex items-start">
+    <div className="w-full h-full p-8 lg:flex items-start">
       <section className="sm:max-lg:w-2/3 lg:w-1/2 lg:h-full lg:pr-8 lg:overflow-y-scroll lg:scrollbar-thin lg:scrollbar-thumb-primary-foreground scrollbar-track-background scrollbar-thumb-rounded-full scrollbar-track-rounded-full">
         <div className="flex flex-col pb-16 lg:pb-4">
           <h1>

@@ -87,10 +87,10 @@
     tracking-tight
   }
   h2{
-    @apply font-inter
+    @apply font-jetbrains
     text-primary-foreground
     font-medium
-    text-2xl
+    text-xl
     my-4
   }
   h3{
@@ -150,5 +150,6 @@
 }
 
 .lucide{
-  stroke-width: 1px;
+  stroke-width: 2px;
+
 }
