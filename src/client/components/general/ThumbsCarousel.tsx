@@ -67,7 +67,7 @@ function ThumbsCarousel({ demos }: ThumbsCarouselItems) {
                   <h3 className="md:text-xl text-base font-bold tracking-wide md:m-0 -m-1">
                     {demo.header}
                   </h3>
-                  <p className="text-center m-2 text-background">
+                  <p className="text-center m-2 text-primary">
                     {demo.description}
                   </p>
                 </CardFooter>
